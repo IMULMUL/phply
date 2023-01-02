@@ -21,7 +21,7 @@ class GenerateParsetab(Command):
 
 
 setup(name="phply",
-      version="1.2.5",
+      version="1.2.6",
       packages=find_packages(),
       namespace_packages=['phply'],
       include_package_data=True,
@@ -59,11 +59,7 @@ setup(name="phply",
       setup_requires=[
         'ply',
         ],
-
-      test_suite='nose.collector',
-      tests_require=[
-        'nose',
-        ],
+      extras_require={'test': ['pytest', 'tox']},
 
       cmdclass={
           'gen_parsetab': GenerateParsetab,
